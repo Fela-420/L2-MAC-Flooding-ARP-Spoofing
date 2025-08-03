@@ -304,6 +304,7 @@ Which brave command of hers should volunteer for our audacious endeavor? How abo
 Before you copy and paste the filter below, it’s best to understand the etterfilter command and its source file syntax. Consult the man page by either running man etterfilter or browsing the linux.die.net/man/8/etterfilter page.
 
 Zoom image will be displayed
+<img width="720" height="610" alt="image" src="https://github.com/user-attachments/assets/900b95e5-d81f-4451-9ce4-d24a4e6a1935" />
 
 man etterfilter
 Now, create a new etterfilter code file named whoami.ecf and try to write a filter matching Alice’s source port and transport protocol as well as replacing whoami data with a reverse shell payload of your choice. To see the solution, click the dropdown arrow:
@@ -333,12 +334,16 @@ Now, run ettercap specifying your newly created etterfilter file:
 ettercap -T -i eth1 -M arp -F whoami.ef
 
 A few seconds after executing this command, you should see the “###### ETTERFILTER: …” message and/or “Connection received on 192.168.12.20 …” in your Netcat output, which means you’ve just caught a reverse shell from Bob! Now, you can quit ettercap (with q), foreground your Netcat listener (with fg), and enjoy your shell!
+<img width="720" height="181" alt="image" src="https://github.com/user-attachments/assets/7b8aa0cf-dd46-4301-b29b-1fb309577f92" />
 
 Zoom image will be displayed
+<img width="720" height="387" alt="image" src="https://github.com/user-attachments/assets/8bc395d3-f17f-45b6-a147-e7f8d41a29de" />
 
 Zoom image will be displayed
+<img width="720" height="282" alt="image" src="https://github.com/user-attachments/assets/9d839b15-f47a-4ccf-8928-d60da9e4fcac" />
 
 Zoom image will be displayed
+<img width="514" height="119" alt="image" src="https://github.com/user-attachments/assets/65de2254-4321-42e8-a939-e776b8f5fa0a" />
 
 
 Note: To restrict ettercap’s ARP poisoning efforts to your actual targets and only display traffic between them, you can specify them as target groups 1 and 2 by using “///”-token annotation after the -M arp option:
@@ -346,12 +351,16 @@ Note: To restrict ettercap’s ARP poisoning efforts to your actual targets and 
 ettercap -T -i eth1 -M arp /192.168.12.10// /192.168.12.20// -F whoami.ef
 
 Hint: In case the reverse shell won’t work, try replacing whoami with a suitable cat command to get the flag.
+<img width="720" height="112" alt="image" src="https://github.com/user-attachments/assets/abaf003f-cfa9-4976-a599-e645328fd2d2" />
 
 Zoom image will be displayed
+<img width="720" height="474" alt="image" src="https://github.com/user-attachments/assets/50dc6106-eb4e-46e9-a2e5-d7a0e3f3768e" />
 
 Zoom image will be displayed
+<img width="720" height="269" alt="image" src="https://github.com/user-attachments/assets/c175f5a1-aabd-439e-8bb4-d8f7197e5903" />
 
 Zoom image will be displayed
+<img width="720" height="301" alt="image" src="https://github.com/user-attachments/assets/36558149-dd48-489c-a656-71f63684845e" />
 
 Zoom image will be displayed
 
